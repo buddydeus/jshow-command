@@ -16,17 +16,23 @@
   "bugs": {
     "url": "https://github.com/j-show/cli/issues"
   },
+  "bin": {
+    "jshow": "./dist/index.js"
+  },
+  "types": "./dist/index.d.ts",
   "scripts": {
     "prepare": "husky install",
     "precommit": "lint-staged",
     "clean": "rm -rf ./dist && rm -rf ./out",
     "build": "ts-node -P ./scripts/tsconfig.json -T ./scripts/build"
   },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "chalk": "^4.1.0",
+    "execa": "^4.0.2"
+  },
   "devDependencies": {
     "@types/node": "^20.11.5",
-    "chalk": "^4.1.0",
-    "execa": "^4.0.2",
-    "fs-extra": "^11.2.0",
     "husky": "latest",
     "lint-staged": "latest",
     "prettier": ">=3",
@@ -36,11 +42,11 @@
   },
   "peerDependencies": {
     "eslint": "^8",
-    "typescript-eslint": "latest",
     "eslint-config-jshow": "latest",
-    "eslint-plugin-jshow": "latest",
     "eslint-config-prettier": "latest",
+    "eslint-plugin-jshow": "latest",
     "eslint-plugin-prettier": "latest",
-    "eslint-plugin-simple-import-sort": "latest"
+    "eslint-plugin-simple-import-sort": "latest",
+    "typescript-eslint": "latest"
   }
 }
