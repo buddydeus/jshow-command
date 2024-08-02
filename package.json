@@ -17,7 +17,7 @@
     "url": "https://github.com/j-show/cli/issues"
   },
   "bin": {
-    "jshow": "./dist/index.js"
+    "jshow": "./dist/cli.js"
   },
   "types": "./dist/index.d.ts",
   "scripts": {
@@ -27,11 +27,13 @@
     "build": "ts-node -P ./scripts/tsconfig.json -T ./scripts/build"
   },
   "dependencies": {
-    "commander": "^12.1.0",
     "chalk": "^4.1.0",
-    "execa": "^4.0.2"
+    "commander": "^12.1.0",
+    "execa": "^4.0.2",
+    "lodash": "^4.17.21"
   },
   "devDependencies": {
+    "@types/lodash": "^4.17.7",
     "@types/node": "^20.11.5",
     "husky": "latest",
     "lint-staged": "latest",
